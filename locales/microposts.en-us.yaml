@@ -1,0 +1,6 @@
+- id: "micropost.created.success"
+  translation: "Micropost was successfully created."
+- id: "micropost.updated.success"
+  translation: "Micropost was successfully updated."
+- id: "micropost.destroyed.success"
+  translation: "Micropost was successfully destroyed."

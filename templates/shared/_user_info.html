@@ -1,0 +1,5 @@
+<img src="<%= gravatar_for(current_user.Email, 50) %>" alt="Avatar" class="gravatar">
+<h1><%= current_user.Name %></h1>
+
+<span><a href="/users/<%= current_user.ID %>">view my profile</a></span>
+<span><%= len(current_user.Microposts) %> <%= pluralize ("microposts")%></span>

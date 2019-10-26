@@ -1,0 +1,15 @@
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <%= partial("shared/user_info.html") %>
+    </section>
+    <section>
+      <%= partial("shared/user_stats.html") %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <%= partial("users/follow_form.html") %>
+    <h3>Micropost Feed</h3>
+    <%= partial("shared/feed.html") %>
+  </div>
+</div>

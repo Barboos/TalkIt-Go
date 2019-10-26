@@ -1,0 +1,7 @@
+<%= formFor(Micropost, {action: micropostsPath(), method: "POST"}) { %>
+  <div class="field">
+    <%= f.InputTag("Title") %>
+    <%= f.TextAreaTag("Content") %>
+  </div>
+  <%= f.SubmitTag("Post") %>
+<% } %>

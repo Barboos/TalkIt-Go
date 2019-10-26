@@ -1,0 +1,6 @@
+create_table("relationships") {
+	t.Column("id", "uuid", {primary: true})
+	t.Column("follower_id", "uuid", {})
+	t.Column("followed_id", "uuid", {})
+	t.Timestamps()
+}

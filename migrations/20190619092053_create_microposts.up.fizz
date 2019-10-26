@@ -1,0 +1,7 @@
+create_table("microposts") {
+	t.Column("id", "uuid", {primary: true})
+	t.Column("title", "string", {})
+	t.Column("content", "string", {})
+	t.Column("user_id", "uuid", {})
+	t.Timestamps()
+}

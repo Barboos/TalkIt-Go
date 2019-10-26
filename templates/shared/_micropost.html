@@ -1,0 +1,17 @@
+<%= for (micropost) in microposts { %>
+  <li id="micropost-<%= micropost.ID %>">
+    <img src="<%= gravatar_for(micropost.User.Email, 50) %>" alt="" class="gravatar">
+    <span class="user">
+      <a href="/users/<%=micropost.UserID%>"><%= micropost.User.Name %></a>
+    </span>
+    <span class="content">
+      <b><%= micropost.Title %></b>
+      <div class="micropost-content">
+        <%= micropost.Content %>
+      </div>
+    </span>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(micropost.CreatedAt) %>.
+    </span>
+  </li>
+<% } %>

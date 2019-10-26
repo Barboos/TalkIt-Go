@@ -1,0 +1,9 @@
+<%= if(current_user.Email != root_user.Email) { %>
+  <div id="follow_form">
+  <%= if (isFollowing(root_user.ID, current_user.ID, c)) {%>
+    <%= partial("users/unfollow.html") %>
+  <% } else {%>
+    <%= partial("users/follow.html") %>
+  <% } %>
+  </div>
+<% } %>

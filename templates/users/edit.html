@@ -1,0 +1,14 @@
+<h1>Update your profile</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= formFor(user, {action: userPath({ user_id: user.ID }), method: "PUT"}) { %>
+      <%= partial("users/form.html") %>
+      <%= linkTo(userPath({ user_id: user.ID }), {class: "btn btn-warning", "data-confirm": "Are you sure?", body: "Cancel"}) %>
+    <% } %>
+    <div class="gravatar_edit">
+      <img src="<%= gravatar_for(user.Email, 50) %>" alt="" class="gravatar">
+      <a href="http://gravatar.com/emails" target="_blank">change</a>
+    </div>
+  </div>
+</div>

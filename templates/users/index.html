@@ -1,0 +1,15 @@
+<h1>All users</h1>
+
+<ul class="users">
+  <%= for (user) in users { %>
+    <li>
+      <img src="<%= gravatar_for(user.Email, 50) %>" alt="" class="gravatar">
+      <a href="<%= userPath({user_id: user.ID}) %>"><%= user.Name %></a>
+    </li>
+  <% } %>
+</ul>
+
+
+<div class="text-center">
+  <%= paginator(pagination) %>
+</div>

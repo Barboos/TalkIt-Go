@@ -1,0 +1,8 @@
+<div class="page-header">
+  <h1>Edit Micropost</h1>
+</div>
+
+<%= formFor(micropost, {action: micropostPath({ micropost_id: micropost.ID }), method: "PUT"}) { %>
+  <%= partial("microposts/form.html") %>
+  <%= linkTo(micropostPath({ micropost_id: micropost.ID }), {class: "btn btn-warning", "data-confirm": "Are you sure?", body: "Cancel"}) %>
+<% } %>

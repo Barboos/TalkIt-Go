@@ -1,0 +1,14 @@
+<h1>Log in</h1>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-6 col-md-offset-3">
+
+    <%= form_for(user, {action: signinPath()}) { %>
+      <%= f.InputTag("Email") %>
+      <%= f.InputTag("Password", {type: "password"}) %>
+      <button class="btn btn-primary">Log in!</button>
+    <% } %>
+    <br>
+    <p>New User? <a href="/users/new">Sign up now!</a></p>
+  </div>
+</div>
